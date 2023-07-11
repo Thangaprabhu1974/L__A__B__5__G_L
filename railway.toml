@@ -1,0 +1,15 @@
+# railway.toml
+
+[[services]]
+  internal = true
+  command = "gunicorn app:app"
+  env = { PYTHONPATH = "./" }
+  internal = true
+  name = "web"
+
+[[services]]
+  internal = true
+  command = "python worker.py"
+  env = { PYTHONPATH = "./" }
+  internal = true
+  name = "worker"
