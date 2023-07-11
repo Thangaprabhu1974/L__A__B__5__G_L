@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 from flask import Flask, request, jsonify, render_template
+import os
+
 
 app = Flask(__name__)
 
